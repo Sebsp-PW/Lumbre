@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="dark" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MAISON DE PARFUM | Alta Perfumería</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Franklin:wght@300;400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffe08f",
+                    "on-secondary": "#3d2e00",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1b1c1c",
+                    "primary-container": "#0a0a0a",
+                    "surface-variant": "#353535",
+                    "secondary": "#e6c364",
+                    "on-primary-container": "#7b7979",
+                    "on-tertiary-fixed-variant": "#494741",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "primary": "#c9c6c5",
+                    "on-primary": "#313030",
+                    "outline-variant": "#444748",
+                    "on-primary-fixed-variant": "#474646",
+                    "primary-fixed-dim": "#c9c6c5",
+                    "tertiary-fixed-dim": "#cac6be",
+                    "tertiary-fixed": "#e7e2da",
+                    "surface-container-high": "#2a2a2a",
+                    "on-surface": "#e4e2e1",
+                    "on-background": "#e4e2e1",
+                    "secondary-container": "#785d00",
+                    "on-secondary-fixed-variant": "#584400",
+                    "secondary-fixed-dim": "#e6c364",
+                    "on-secondary-fixed": "#241a00",
+                    "background": "#131313",
+                    "inverse-primary": "#5f5e5e",
+                    "outline": "#8e9192",
+                    "surface-container": "#1f2020",
+                    "tertiary-container": "#0b0a06",
+                    "surface-bright": "#393939",
+                    "inverse-surface": "#e4e2e1",
+                    "on-secondary-container": "#fdd977",
+                    "surface": "#131313",
+                    "on-surface-variant": "#c4c7c7",
+                    "inverse-on-surface": "#303030",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-tint": "#c9c6c5",
+                    "tertiary": "#cac6be",
+                    "surface-container-highest": "#353535",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#1d1c17",
+                    "on-tertiary": "#32302b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#7c7973"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "32px",
+                    "margin-mobile": "20px",
+                    "section-gap": "160px",
+                    "container-max": "1440px",
+                    "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                    "title-sm": ["Playfair Display"],
+                    "body-lg": ["Libre Franklin"],
+                    "headline-md": ["Playfair Display"],
+                    "label-caps": ["Libre Franklin"],
+                    "body-md": ["Libre Franklin"],
+                    "headline-md-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "title-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #F5F0E8;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gold-underline {
+            position: relative;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #C9A84C;
+            transition: width 0.5s ease;
+        }
+        .gold-underline:hover::after {
+            width: 100%;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(201, 168, 76, 0.05) 0%, rgba(10, 10, 10, 1) 70%);
+        }
+        .floating-button {
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.2);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+        .btn-luxury {
+            border: 1px solid #C9A84C;
+            color: #F5F0E8;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-luxury:hover {
+            background-color: #C9A84C;
+            color: #0A0A0A;
+        }
+        .product-card img {
+            transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Nav link animation */
+        nav a {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            width: 0; height: 1px;
+            background: #C9A84C;
+            transition: width 0.4s ease, left 0.4s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        nav a:hover {
+            color: #e4e2e1 !important;
+            text-shadow: 0 0 12px rgba(201,168,76,0.4);
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface" data-mode="connect">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 md:px-20 max-w-container-max mx-auto bg-background/95 border-b border-outline-variant/30 backdrop-blur-sm py-6">
+<div class="flex items-center gap-8">
+<h1 class="font-display-lg text-2xl md:text-3xl text-on-surface tracking-tighter uppercase font-bold">Lumbre</h1>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1" href="#">Colecciones</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#catalogo">Fragancias</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#filosofia">Pasion</a>
+</nav>
+</div>
+<div class="flex items-center gap-6 flex-row-reverse">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-all">search</span>
+</div>
+</header>
+<main>
+<section class="relative h-screen flex flex-col items-center justify-center text-center px-margin-mobile overflow-hidden">
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 space-y-6">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase tracking-widest text-on-surface reveal active">Lumbre</h2>
+<p class="font-title-sm text-lg md:text-xl text-secondary tracking-[0.3em] reveal delay-200 active">
+                    EL ARTE DE SEDUCIR CON CADA AROMA
+                </p>
+<div class="pt-12 reveal delay-500 active">
+<a class="btn-luxury px-12 py-4 font-label-caps text-label-caps" href="#catalogo">
+                        Explorar Colección
+                    </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50">
+<div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-secondary"></div>
+</div>
+</section>
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="catalogo">
+<div class="text-center mb-24 reveal active">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md mb-4 italic">Colección Exclusiva</h2>
+<div class="w-24 h-[1px] bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-y-24 gap-x-gutter">
+<div class="product-card group reveal active">
+<div class="aspect-square overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover" src="https://arle.co/cdn/shop/files/1af6e6424a1ac54e2c42e0e03bdb0ac5fc4e6f4a-800x800_186b0766-6a08-40c6-8fbc-6a593f6df3ea.webp?v=1745877121&width=1000" alt="Perfume One Million 100ml">
+</div>
+<div class="text-center space-y-2">
+<h3 class="font-title-sm text-lg">One Million</h3>
+<p class="font-body-md text-on-surface-variant opacity-70">Esencia de Oro y Seducción</p>
+<p class="font-label-caps text-secondary text-base mt-4">$90.000 COP</p>
+<a href="https://wa.me/573173855536" target="_blank" class="mt-6 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-500 btn-luxury px-8 py-2 font-label-caps text-[10px]">Consultar por WhatsApp</a>
+</div>
+</div>
+<div class="product-card group reveal delay-100 active">
+<div class="aspect-square overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ25Gp3caQ0kk5ejc0rgIJqxZhA0K2oNEBEgvFe3izv7kl8a-LHCDZMlSD_caBRohZq-HnKDSaPRC5y2PCGTxI_aBw8RcARzRQcKdFOw6q6pdKFY3-OyhV8D88zU5mzHAiNcEw7GmxMYc-O83RSz2-SH-NwLw7GJCRVUXRDBVfe0Hm_s6PISmLLBKGCtIQwAVN2YHGLQ3NQgN6apa211bFRsWt8-KZWtsp_ED3QIK5BM0vKbi-GFfvgXq4TWXWBvgnjSMkrXtOE54Gyw" alt="Royal Oud Saffron Orientica">
+</div>
+<div class="text-center space-y-2">
+<h3 class="font-title-sm text-lg">Royal Oud Saffron Orientica</h3>
+<p class="font-body-md text-on-surface-variant opacity-70">Aroma dulce con transfondo amaderado</p>
+<p class="font-label-caps text-secondary text-base mt-4">$200.000 COP</p>
+<a href="https://wa.me/573173855536" target="_blank" class="mt-6 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-500 btn-luxury px-8 py-2 font-label-caps text-[10px]">Consultar por WhatsApp</a>
+</div>
+</div>
+<div class="product-card group reveal delay-200 active">
+<div class="aspect-square overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover" src="https://www.duneperfumes.com.au/cdn/shop/files/asad-100ml-edp-lattafa-219063.jpg?v=1750994200" alt="Perfume Lattafa Asad">
+</div>
+<div class="text-center space-y-2">
+<h3 class="font-title-sm text-lg">Perfume Lattafa Asad</h3>
+<p class="font-body-md text-on-surface-variant opacity-70">Elegancia árabe intensa y seductora.</p>
+<p class="font-label-caps text-secondary text-base mt-4">$110.000 COP</p>
+<a href="https://wa.me/573173855536" target="_blank" class="mt-6 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-500 btn-luxury px-8 py-2 font-label-caps text-[10px]">Consultar por WhatsApp</a>
+</div>
+</div>
+<div class="product-card group reveal active">
+<div class="aspect-square overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover" src="https://envioacasa.co/cdn/shop/files/Perfume_Hombre_Creed_Aventus_100_ml_EDT_ENVIOACASA.CO_ENVIO_A_CASA_09_d3d7b11e-01fa-4a8b-90d4-6f376d472900.jpg?v=1731222522&width=1445" alt="Creed Aventus">
+</div>
+<div class="text-center space-y-2">
+<h3 class="font-title-sm text-lg">Creed Aventus</h3>
+<p class="font-body-md text-on-surface-variant opacity-70">El aroma del éxito absoluto.</p>
+<p class="font-label-caps text-secondary text-base mt-4">$110.000 COP</p>
+<a href="https://wa.me/573173855536" target="_blank" class="mt-6 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-500 btn-luxury px-8 py-2 font-label-caps text-[10px]">Consultar por WhatsApp</a>
+</div>
+</div>
+<div class="product-card group reveal delay-100 active">
+<div class="aspect-square overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover" src="https://http2.mlstatic.com/D_NQ_NP_730387-MLA90201739730_082025-O.webp" alt="Valentino Roma Intense">
+</div>
+<div class="text-center space-y-2">
+<h3 class="font-title-sm text-lg">Valentino Roma Intense</h3>
+<p class="font-body-md text-on-surface-variant opacity-70">Seducción nocturna en cada gota</p>
+<p class="font-label-caps text-secondary text-base mt-4">$110.000 COP</p>
+<a href="https://wa.me/573173855536" target="_blank" class="mt-6 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-500 btn-luxury px-8 py-2 font-label-caps text-[10px]">Consultar por WhatsApp</a>
+</div>
+</div>
+<div class="product-card group reveal delay-200 active">
+<div class="aspect-square overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover" src="https://arle.co/cdn/shop/files/867bda03b947142982a14860d60102de7d813897-1280x1384_7519e2c4-ef24-4310-8c5e-f0ae1f8b1c51.webp?v=1760045651&width=1000" alt="Dior Sauvage Elixir">
+</div>
+<div class="text-center space-y-2">
+<h3 class="font-title-sm text-lg">Dior Sauvage Elixir</h3>
+<p class="font-body-md text-on-surface-variant opacity-70">Destaca por su sofisticación y profunda fijación</p>
+<p class="font-label-caps text-secondary text-base mt-4">$110.000 COP</p>
+<a href="https://wa.me/573173855536" target="_blank" class="mt-6 inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-500 btn-luxury px-8 py-2 font-label-caps text-[10px]">Consultar por WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-gap bg-surface-container-lowest border-y border-outline-variant/10" id="filosofia">
+<div class="max-w-3xl mx-auto px-margin-mobile text-center space-y-12 reveal active">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md">Nuestra Filosofía</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-lg leading-relaxed text-on-surface/80 italic" style="color: rgb(201, 168, 76); font-family: 'Playfair Display', serif; font-size: 20px;">"El mismo aroma que conoces y amas, al precio que mereces."</p>
+<p class="font-body-md text-on-surface-variant" style="color: rgb(160, 153, 142); font-size: 15px;">En Lumbre creemos que oler bien no debería costar una fortuna. Ofrecemos fragancias inspiradas en los perfumes más reconocidos del mundo — con la misma esencia, la misma proyección y la misma elegancia, pero a un precio accesible para todos. Lujo sin excusas.</p>
+</div>
+<div class="pt-8">
+<div class="inline-flex flex-col items-center gap-4">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Pasión</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-section-gap px-8 md:px-20 flex flex-col items-center gap-12 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="w-full flex flex-col md:flex-row justify-between items-center gap-12 max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h2 class="font-title-sm text-title-sm text-on-surface tracking-tighter" style="color: rgb(250, 249, 245); font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 600; letter-spacing: 6px; text-transform: uppercase;">Lumbre</h2>
+<p class="text-on-primary-container text-sm max-w-xs text-center md:text-left">La cumbre de la perfumería de nicho en Latinoamérica.</p>
+</div>
+<nav class="flex gap-8">
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Términos</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Contacto</a>
+</nav>
+</div>
+<p class="font-label-caps text-[10px] text-on-primary-container tracking-widest mt-12 opacity-50">
+            © 2024 MAISON DE PARFUM. TODOS LOS DERECHOS RESERVADOS.
+        </p>
+</footer>
+<a class="fixed bottom-10 right-10 z-[100] flex items-center gap-3 bg-secondary text-primary-container pl-4 pr-6 py-3 rounded-full floating-button group transition-all duration-300" href="https://wa.me/573173855536" target="_blank">
+<span class="material-symbols-outlined fill text-2xl" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-label-caps text-[11px] font-bold">Escríbenos</span>
+</a>
+<script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-4');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.add('py-6');
+                header.classList.remove('py-4');
+            }
+        });
+
+        // Smooth scroll with fade+scale animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+
+                // Flash overlay
+                const overlay = document.createElement('div');
+                overlay.style.cssText = `
+                    position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+                    background: radial-gradient(circle at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+                    opacity: 0; transition: opacity 0.4s ease;
+                `;
+                document.body.appendChild(overlay);
+                requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+
+                setTimeout(() => {
+                    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top, behavior: 'smooth' });
+
+                    // Highlight target section briefly
+                    target.style.transition = 'box-shadow 0.6s ease';
+                    target.style.boxShadow = '0 0 60px rgba(201,168,76,0.08)';
+                    setTimeout(() => { target.style.boxShadow = ''; }, 1200);
+
+                    overlay.style.opacity = '0';
+                    setTimeout(() => overlay.remove(), 500);
+                }, 200);
+            });
+        });
+    </script>
+</body></html>
